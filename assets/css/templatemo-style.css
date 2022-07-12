@@ -143,7 +143,7 @@ html {
 }
 
 .menu .author-content {
-    margin: 40px 0px 60px 0px;
+    margin: 40px 0px 10px 0px;
 }
 
 .menu .author-content h4 {
@@ -827,4 +827,19 @@ section.contact-me {
     .isotope-toolbar {
         margin-bottom: 20px;
     }
+}
+body{
+    font-size:4rem;
+}
+.soial-icons{
+    font-size:1rem
+}
+li{
+    font-size:1rem;
+}
+.socials{
+    float:left;
+    margin-top:2cm;
+    font-family:sans-serif;
+    
 }
