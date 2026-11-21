@@ -11,7 +11,10 @@
 <meta property="og:title" content="My LLM was confident 99% of the time. It was right 39% of the time.">
 <meta property="og:description" content="I let an LLM make the hard calls in my complaint triage system. It was almost always sure and wrong more often than the classifier. Here&#x27;s what I changed.">
 <meta property="og:url" content="https://hardikbahri.github.io/writing/llm-confidence/">
-<meta property="og:image" content="https://hardikbahri.github.io/og-image.png">
+<meta property="og:image" content="https://hardikbahri.github.io/writing/llm-confidence/cover.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The LLM said it was highly confident on 99% of answers, was right on 39%, against 43% for the classifier.">
 <meta name="twitter:card" content="summary_large_image">
 <meta property="article:published_time" content="2026-11-21">
 <link rel="preload" href="../../fonts/bricolage.woff2" as="font" type="font/woff2" crossorigin>
@@ -29,6 +32,7 @@ a{color:var(--ink);text-decoration-color:var(--teal);text-underline-offset:3px;t
 .top a.back{font-family:inherit;font-weight:400;font-size:15px;color:var(--slate)}
 article{max-width:720px;margin:0 auto;padding:48px 24px 96px}
 h1{font-family:"Bricolage";font-weight:700;font-size:clamp(34px,5vw,50px);line-height:1.06;letter-spacing:-.012em;font-variation-settings:"wdth" 92,"opsz" 96;margin:0 0 18px}
+.cover{display:block;width:100%;height:auto;border-radius:12px;margin:0 0 40px}
 .meta{color:var(--slate);font-size:15px;margin:0 0 40px}
 h2{font-family:"Bricolage";font-weight:700;font-size:28px;line-height:1.2;font-variation-settings:"wdth" 92;margin:48px 0 14px}
 p{margin:0 0 1.1em}
@@ -46,6 +50,7 @@ th{font-weight:600;border-bottom:2px solid var(--ink)}
 <article>
 <h1>My LLM was confident 99% of the time. It was right 39% of the time.</h1>
 <p class="meta">Hardik Bahri, 21 November 2026, 6 minute read</p>
+<img class="cover" src="cover.png" width="1200" height="630" alt="The LLM said it was highly confident on 99% of its answers but was right on only 39%, against 43% for the small classifier on the same complaints.">
 <p>I gave an LLM the hardest cases in my project and asked it to make the call. It said it was highly confident on 99% of its answers. It got 39% of them right, which was worse than the small classifier it was supposed to rescue.</p>
 <p>The project is ComplaintOps, a triage system for US consumer financial complaints. It sorts each complaint into one of 24 categories and decides whether a machine can answer it or a person should look. This is the story of why the LLM ended up writing notes for people instead of making decisions, and what I'd tell anyone building the same kind of system.</p>
 <h2>The setup: a small model that knows when it's unsure</h2>
